@@ -1,4 +1,4 @@
-# PythonStudy
+# Study
 
 - https://programmers.co.kr/learn/challenges?tab=all_challenges
 - https://www.acmicpc.net/
