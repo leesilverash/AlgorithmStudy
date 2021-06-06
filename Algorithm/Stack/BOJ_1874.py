@@ -16,7 +16,7 @@ for i in range(n):
         result.append("-")
     else:
         isValid = False
-        exit(0)
+        break
 
 if isValid==False:
     print("NO")
