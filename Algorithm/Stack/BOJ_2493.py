@@ -1,16 +1,18 @@
 import sys
 
-n = int(sys.stdin.readline().rstrip())
+n = int(sys.stdin.readline().strip())
 lst = list(map(int,sys.stdin.readline().strip().split()))
 stack = []
-result = [0]*n
-
-for i in range(n):
-    num = int(sys.stding.readline().rstrip())
-    if stack:
-        if stack[-1] > num:
-            result.append()
+answer = []
+for i, j in enumerate(lst):
+    while stack:
+        if stack[-1][1] > j:
+            answer.append(stack[-1][0]+1)
+            break
+        else:
+            stack.pop()
     else:
-        stack.append(num)
+        answer.append(0)
+    stack.append([i,j])
 
-
+print(' '.join(map(str,answer)))
