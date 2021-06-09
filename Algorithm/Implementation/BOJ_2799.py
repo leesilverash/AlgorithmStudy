@@ -10,16 +10,18 @@ for i in range(5 * M + 1):
     for c in line:
         apartment.append(c)
 
+def fillWithHash(index):
+    for i in range(4):
+        apartment[index + i] = '#'
+
 def blind(index):
     count = 0
     for i in range(4):
         if apartment[index] == '*':
             count += 1
-            for j in range(4):
-                apartment[index+j] = '#'
+            fillWithHash(index)
         else:
-            for j in range(4):
-                apartment[index + j] = '#'
+            fillWithHash(index)
         index += 5 * N + 1
     return count
 
