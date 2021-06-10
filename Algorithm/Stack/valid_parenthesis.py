@@ -3,7 +3,7 @@
 # 만약 올바르다면 True 아니라면 False를 출력하라.
 
 s = input()
-answer = True
+
 def isValid(s):
     opening = "{[("                                 # 여는 괄호
     closing = "}])"                                 # 닫는 괄호
