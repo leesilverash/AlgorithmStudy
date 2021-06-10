@@ -10,7 +10,7 @@ for i in range(5):
     num_list.extend(list(map(int, sys.stdin.readline().strip().split())))
 
 
-def seroBingo(board):
+def seroBingo():
     count = 0
     for i in range(5):
         if sum(board[i::5]) == 0:
@@ -18,7 +18,7 @@ def seroBingo(board):
     return count
 
 
-def garoBingo(board):
+def garoBingo():
     count = 0
     i = 0
     j = i + 5
@@ -30,7 +30,7 @@ def garoBingo(board):
     return count
 
 
-def diagonal1(board):
+def diagonal1():
     j = 4
     sum = 0
     count = 0
@@ -43,18 +43,18 @@ def diagonal1(board):
         return 0
 
 
-def diagonal2(board):
+def diagonal2():
     if sum(board[0::6]) == 0:
         return 1
     else:
         return 0
 
 
-def bingoCount(board):
-    garo = garoBingo(board)
-    sero = seroBingo(board)
-    diag1 = diagonal1(board)
-    diag2 = diagonal2(board)
+def bingoCount():
+    garo = garoBingo()
+    sero = seroBingo()
+    diag1 = diagonal1()
+    diag2 = diagonal2()
     # print('garo',garo)
     # print('sero',sero)
     # print('d1',diag1)
@@ -65,7 +65,7 @@ def bingoCount(board):
 for i, num in enumerate(num_list):
     board[board.index(num)] = 0
     if i >= 10:
-        bingo = bingoCount(board)
+        bingo = bingoCount()
         if bingo >= 3:
             break
     answer += 1
