@@ -19,9 +19,7 @@ def blind(index):
     for i in range(4):
         if apartment[index] == '*':
             count += 1
-            fillWithHash(index)
-        else:
-            fillWithHash(index)
+        fillWithHash(index)
         index += 5 * N + 1
     return count
 
