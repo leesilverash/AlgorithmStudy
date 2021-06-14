@@ -1,16 +1,17 @@
+import sys
 import heapq
 
-n, m = map(int,input().split())
-list = list(map(int, input().split(' ')))
-heap = []
+N,M = map(int, sys.stdin.readline().rstrip().split())
 
-for i in list:
-    heapq.heappush(heap,i)
+lst = []
+lst.extend(list(map(int, sys.stdin.readline().rstrip().split())))
+heapq.heapify(lst)
 
-for _ in range(m):
-    x = heapq.heappop(heap)
-    y = heapq.heappop(heap)
-    heapq.heappush(heap, x+y)
-    heapq.heappush(heap, x+y)
+for _ in range(M):
+    x = heapq.heappop(lst)
+    y = heapq.heappop(lst)
+    heapq.heappush(lst, x + y)
+    heapq.heappush(lst, x + y)
 
-print(sum(heap))
+print(sum(lst))
+
