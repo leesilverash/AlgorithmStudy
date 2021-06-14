@@ -1,7 +1,7 @@
 import sys
 import heapq
 
-N,M = map(int, sys.stdin.readline().rstrip().split())
+N, M = map(int, sys.stdin.readline().rstrip().split())
 
 lst = []
 lst.extend(list(map(int, sys.stdin.readline().rstrip().split())))
@@ -14,4 +14,3 @@ for _ in range(M):
     heapq.heappush(lst, x + y)
 
 print(sum(lst))
-
