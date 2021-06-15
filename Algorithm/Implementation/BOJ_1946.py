@@ -1,5 +1,5 @@
 import sys
-
+import heapq
 T = int(sys.stdin.readline().rstrip())
 
 while T > 0:
