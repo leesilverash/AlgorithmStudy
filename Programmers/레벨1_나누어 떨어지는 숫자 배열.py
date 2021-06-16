@@ -1,8 +1,9 @@
-def solution(arr, divisor):
+def solution(strings, n):
     answer = []
-    for i in arr:
-        if i % divisor == 0:
-            answer.append(i)
-
-    answer.sort() if answer else answer.append(-1)
+    tmp = []
+    for i in strings:
+        tmp.append([i[n], i])
+    tmp.sort()
+    for i in tmp:
+        answer.append(i[1])
     return answer
