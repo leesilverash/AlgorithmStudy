@@ -11,6 +11,13 @@ def is_prime_number(n):
                 j += 1
     return [ i for i in range(2, n+1) if array[i] ]
 # N이 1,000,000 이내로 주어지는 경우 활용할 것 => 이론상 400만번 정도 연산이고 메모리도 충분함
-
-
 print(is_prime_number(26))
+
+# 특정 숫자에 소수인지 판단
+def isPrime(num):
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+print(isPrime(7))
