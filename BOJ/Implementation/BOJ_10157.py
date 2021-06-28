@@ -9,5 +9,4 @@ for i in range(1, x*y+1):
     if y_idx > 0:
         board[-i][0] = i
 
-
 print(board)
