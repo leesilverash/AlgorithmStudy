@@ -9,11 +9,8 @@ for i in range(n):
     else:
         company[name] = 1
 
-<<<<<<< HEAD
 for name in company.items():
     print(name[0])
-=======
 ans = sorted(company.items(), reverse=True)
 for i in ans:
     print(i[0])
->>>>>>> 7d9583ecb6ba976de6c419fcb885daa8f597a490
