@@ -8,6 +8,7 @@ def solution(table, languages, preference):
         inf = information.split()
         current_score = {inf[i]: 6 - i for i in range(1, len(inf))}
         total_score = 0
+
         for lan in score.keys():
             if current_score.get(lan):
                 total_score += (current_score[lan] * score[lan])
