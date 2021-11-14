@@ -16,5 +16,3 @@ for i in lst:
 for i in sorted(lst):
     print(i)
 
-
-
