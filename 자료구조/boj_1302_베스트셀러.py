@@ -1,6 +1,6 @@
 n = int(input())
 
-dict = {}
+dict = dict()
 
 for _ in range(n):
     book = input()
@@ -12,6 +12,5 @@ for _ in range(n):
 lst = [(k,v) for k,v in dict.items()]
 filteredList = sorted(list(filter(lambda x:x[1] == max(dict.values()), lst)), key = lambda x: x[0])
 print(filteredList[0][0])
-
 
 
