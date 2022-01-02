@@ -3,7 +3,7 @@
 
 N = int(input())
 lst = list(map(int, input().split()))
-avg = round(sum(lst)/len(lst))
+avg = int(sum(lst)/len(lst)+0.5)
 difference = 101
 score = 0
 ans = 0
