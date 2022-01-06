@@ -11,7 +11,7 @@ def extractNumber(str):
 
 def getDivisorNumber(num):
     ans = 0
-    for i in range(1, int(num**(1/2)) +1):
+    for i in range(1, int(num**(1/2)) + 1):
         if num % i == 0:
             ans+=1
     return ans*2
