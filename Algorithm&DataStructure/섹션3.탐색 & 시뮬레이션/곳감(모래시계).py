@@ -4,6 +4,7 @@
 from collections import deque
 n = int(input())
 lst = []
+
 for i in range(n):
     lst.append(deque(map(int,input().split())))
 
@@ -15,20 +16,22 @@ for i in range(m):
     else:
         lst[x-1].rotate(-z)
 answer = 0
-
+begin, end = 0, n//2+1
 for i in range(n//2+1):
     if i < n//2:
         if i == 0:
             answer += sum(lst[i])
             answer += sum(lst[n - i - 1])
         else:
-            lst[i].pop()
-            lst[i].popleft()
-            lst[n - i - 1].pop()
-            lst[n - i - 1].popleft()
+            for j in range(i):
+                lst[i].pop()
+                lst[i].popleft()
+                lst[n - i - 1].pop()
+                lst[n - i - 1].popleft()
             answer += sum(lst[i])
             answer += sum(lst[n - i - 1])
     else:
+        print(lst[i][i])
         answer += lst[i][i]
 
 print(answer)
@@ -42,3 +45,21 @@ print(answer)
 # 2 0 3
 # 5 1 2
 # 3 1 4
+
+
+# 9
+# 64 8 59 87 94 71 66 4 9
+# 38 21 30 24 33 65 7 79 27
+# 99 10 78 74 84 32 33 74 30
+# 4 6 69 53 100 15 23 15 88
+# 22 88 8 3 62 75 46 4 41
+# 39 64 7 75 91 26 83 32 41
+# 100 98 20 100 18 39 90 60 56
+# 56 30 94 29 81 76 96 50 11
+# 66 88 88 95 13 56 29 13 31
+# 5
+# 1 0 5
+# 3 0 6
+# 2 1 5
+# 6 0 7
+# 5 0 8
