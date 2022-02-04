@@ -1,4 +1,5 @@
 import sys
+input = sys.stdin.readline()
 
 p, q = list(map(int, sys.stdin.readline().rstrip().split()))
 

@@ -9,13 +9,11 @@ for i in range(pair):
     matrix[a - 1][b - 1] = 1
     matrix[b - 1][a - 1] = 1
 
-
 def dfs(v):
     visited[v] = 1
     for i in range(n):
         if matrix[v][i] == 1 and visited[i] == 0:
             dfs(i)
-
 
 dfs(0)
 cnt = 0

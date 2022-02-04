@@ -11,6 +11,7 @@ def bfs(graph, x, y):
     graph[x][y] = 0
     cnt = 1
 
+
     while que:
         x, y = que.popleft()
         for i in range(4):
