@@ -7,7 +7,6 @@ for i in range(len(lst)):
     for j in lst[i]:
         if tmp and j == tmp[0]:
             tmp.popleft()
-
     if len(tmp) > 0:
         print("#{} No".format(i+1))
     else:
