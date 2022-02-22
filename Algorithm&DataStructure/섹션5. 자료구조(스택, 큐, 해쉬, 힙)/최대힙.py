@@ -1,9 +1,10 @@
 import heapq
 heap =[]
+
 while True:
     n = int(input())
     if n == -1:
-        break
+        breakn
     if n == 0:
         if len(heap) == 0:
             print(-1)
