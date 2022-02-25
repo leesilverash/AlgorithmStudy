@@ -2,7 +2,7 @@ import sys
 n = int(input())
 lst = list(map(int, input().split()))
 total = sum(lst)
-answer = False
+
 def DFS(L, sum):
     if sum > total // 2:
         return
