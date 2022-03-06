@@ -18,3 +18,4 @@ res = [0] * m
 ch = [0] * (n+1)
 ans = 0
 dfs(0)
+print(ans)
