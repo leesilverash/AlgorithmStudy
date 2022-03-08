@@ -1,25 +1,16 @@
-n = int(input())
-lst = sorted(list(map(int, input().split())), reverse= True)
-m = int(input())
-ans = 214700000
+from itertools import permutations
 
-def dfs(l, sum):
-    global ans
-    if l >= ans:
-        return
-    if sum > ans:
-        return
-    if sum == m:
-        if l < ans:
-            ans = l
-    else:
-        for i in range(n):
-            dfs(l+1, sum+lst[i])
-
-
-
-dfs(0, 0)
-print(ans)
-# 3
-# 1 2 5
-# 15
+n, f = map(int, input().split())
+b = [1] * n
+for i in range(1, n):
+    b[i] = b[i-1]*(n-i)/i
+a = list(range(1, n+1))
+cnt = 0
+for tmp in permutations(a):
+    sum = 0
+    for l, x in enumerate(tmp):
+        sum+=(x*b[l])
+    if sum == f:
+        for x in tmp:
+            print(x, end=' ')
+        break
