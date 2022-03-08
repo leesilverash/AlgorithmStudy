@@ -3,6 +3,7 @@ lst = sorted(list(map(int, input().split())))
 m = int(input())
 res= [0] * k
 ans = 0
+
 def dfs(l, s, sum):
     global ans
     if l == k:
