@@ -1,6 +1,6 @@
-
 def dfs(v):
     global cnt
+    global ans
     if v == n:
         cnt += 1
     else:
@@ -14,7 +14,7 @@ n, m = map(int, input().split())
 g = [[0] * (n + 1) for _ in range(n + 1)]
 ch = [0] * (n + 1)
 cnt = 0
-
+ans = 214700000
 for i in range(m):
     a, b = map(int, input().split())
     g[a][b] = 1
