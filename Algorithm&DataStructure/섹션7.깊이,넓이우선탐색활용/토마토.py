@@ -7,12 +7,10 @@ q = deque()
 dis = [[0] * n for _ in range(m)]
 result = 0
 flag = 1
-
 for i in range(m):
     for j in range(n):
         if board[i][j] == 1:
             q.append((i, j))
-
 while q:
     tmp = q.popleft()
     for i in range(4):
@@ -22,12 +20,10 @@ while q:
             board[xx][yy] = 1
             dis[xx][yy] = dis[tmp[0]][tmp[1]]+1
             q.append((xx,yy))
-
 for i in range(m):
     for j in range(n):
         if board[i][j] == 0:
             flag = 0
-
 if flag == 1:
     for i in range(m):
         for j in range(n):
