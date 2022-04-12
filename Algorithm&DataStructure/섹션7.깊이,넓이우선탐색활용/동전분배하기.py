@@ -1,21 +1,34 @@
-
-def dfs(l, sums):
-    global ans
+def dfs(l):
+    global res
     if l == n:
-        val = max(sums) - min(sums)
-        if val < ans:
-            ans = val
+        cha = max(money) - min(money)
+        if cha < res:
+            print(cha)
+            return
     else:
-        for i in range(n):
-            if ch[i] == 0:
-                ch[i] = 1
-                dfs(l+1, sums[])
+        for i in range(3):
+            money[i] += coin[l]
+            dfs(l+1)
+            money[i] -= coin[l]
+            dfs(l)
+
 
 n = int(input())
-lst = [0] * n
-ch = [0] * n
-ans = 214700000
+coin = []
+money = [0] * 3
+res = 214700000
+
 for i in range(n):
-    lst[i] = int(input())
-sums = [0] * 3
-dfs(0, sums)
+   coin.append(int(input()))
+
+dfs(0)
+print(res)
+
+# 7
+# 8
+# 9
+# 11
+# 12
+# 23
+# 15
+# 17
