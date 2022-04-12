@@ -6,9 +6,8 @@ def dfs(l, score, time):
         if score > ans:
             ans = score
     else:
-        for i in range(1, n+1):
-            dfs(l+1, score+lst[l][0], time+lst[l][1])
-            dfs(l+1, score, time)
+        dfs(l+1, score+lst[l][0], time+lst[l][1])
+        dfs(l+1, score, time)
 
 n, m = map(int, input().split())
 ch = [0] * (n+1)
